@@ -1,0 +1,70 @@
+.sideContainer{
+    width: 220px;
+    height: 100vh;
+    background-color: white;
+    float: left;
+}
+.userImage{
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.userImage img{
+    width: 100%;
+}
+.navLinks{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(17, 3, 78);
+    padding-top: 50px;
+}
+.navLinks ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.navLinks ul li{
+    width: 100%;
+    height: 40px;
+    /* background-color: blue; */
+    border-bottom: 1px solid white;
+    color: white;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.navLinks ul li:hover{
+    background-color: rgb(49, 49, 236);
+}
+.bottomContainer{
+    display: none;
+}
+@media(min-width:0px) and (max-width: 600px){
+    .sideContainer{
+        display: none;
+    }
+    .bottomContainer{
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 50px;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0px;
+        border-top: 1px solid grey;
+
+    }
+    .bottomContainer div{
+        flex: 1;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+}

@@ -1,0 +1,7 @@
+.topMenu{
+    display: flex;
+    width: 100vw;
+}
+.topMenu div{
+    flex: 1;
+}

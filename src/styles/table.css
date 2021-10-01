@@ -1,0 +1,48 @@
+/* .custom_row{
+    background-color: white;
+   height: 50px;
+   margin-top: 10px;
+   border: 3px solid #F7F7F7;
+    }
+table{
+    width: 94vw;
+    background-color: transparent;
+    display: block;
+    margin: auto;
+
+} */
+.table_container{
+    
+    width: 95%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    margin: auto;
+    box-shadow: -2px 2px 2px black;
+    border: 1px solid white;
+    font-size: 13px;
+    border-radius: 10px;
+    color: black;
+
+}
+.table_container div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add_cutomer button{
+    float: right;
+    margin-right: 2.5vw;
+    background-color: #043979;
+}
+.icon{
+   
+    /* background-color: red; */
+   
+}
+.icon div{
+    /* width: 5px !important; */
+    /* height: 10px; */
+    /* background-color: blue; */
+}

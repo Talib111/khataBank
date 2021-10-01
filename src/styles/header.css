@@ -1,0 +1,30 @@
+
+.section_bg{
+    width: 100vw;
+    height: 90vh;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../media/bg.jpg);
+    position: relative
+    
+}
+.black{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.5;
+}
+.section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    z-index: 1;
+}
