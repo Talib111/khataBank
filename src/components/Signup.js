@@ -3,7 +3,7 @@ import {FaFacebookF} from 'react-icons/fa'
 import github from '../assets/img/github.svg'
 import google from '../assets/img/google.svg'
 import { AiOutlineGoogle} from 'react-icons/ai'
-const Login = ()=>{
+const Signup = ()=>{
   console.log('Login rendered')
 
     return (
@@ -26,7 +26,7 @@ const Login = ()=>{
                 </div>
                 <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                   <div className="text-gray-500 text-center mb-3 font-bold">
-                    <small>Or sign in with credentials</small>
+                    <small>Or Sign up with credentials</small>
                   </div>
                   <form>
                     <div className="relative w-full mb-3">
@@ -40,7 +40,7 @@ const Login = ()=>{
                     </div>
                     <div className="text-center mt-6">
                       <button className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full" type="button" style={{"transition": "all 0.15s ease 0s"}}>
-                        Sign In
+                        Sign Up
                       </button>
                     </div>
                   </form>
@@ -59,4 +59,4 @@ const Login = ()=>{
     )
 }
 
-export default Login
+export default Signup

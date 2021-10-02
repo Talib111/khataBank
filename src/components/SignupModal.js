@@ -1,14 +1,46 @@
-
-import {FaFacebookF} from 'react-icons/fa'
+import React from 'react';
 import github from '../assets/img/github.svg'
 import google from '../assets/img/google.svg'
-import { AiOutlineGoogle} from 'react-icons/ai'
-const Login = ()=>{
-  console.log('Login rendered')
+import Modal from 'react-modal';
 
-    return (
-        <>
-        <div className="w-full lg:w-4/12 px-4 mx-auto">
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    padding: '0'
+  },
+};
+
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement('#root');
+
+function SignupModal() {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+ 
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  return (
+    <div>
+      <button onClick={openModal} className="w-32 h-10 bg-blue-600">Login Modal</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal" 
+      >
+        <div className="w-full lg:w-4/12 sm:px-4 mx-auto">
               <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
                 <div className="rounded-t mb-0 px-6 py-6">
                   <div className="text-center mb-3">
@@ -55,8 +87,11 @@ const Login = ()=>{
                 </div>
               </div>
             </div>
-        </>
-    )
+      </Modal>
+    </div>
+  );
 }
 
-export default Login
+// ReactDOM.render(<App />, appElement);
+
+export default SignupModal

@@ -15,6 +15,9 @@ import Gave from './components/Gave';
 import EachTran from './components/EachTran';
 import Card from './components/Card';
 import Landing from './components/Landing'
+import Login from './components/Login';
+import Signup from './components/Signup';
+import LoginModal from './components/LoginModal';
 
 
 function App() {
@@ -52,6 +55,15 @@ function App() {
       </Route>
       <Route path='/cards'>
         <Card/>
+      </Route>
+      <Route path='/login'>
+        <Login/>
+      </Route>
+      <Route path='/signup'>
+       <Signup/>
+      </Route>
+      <Route path='/modal'>
+       <LoginModal/>
       </Route>
      
      

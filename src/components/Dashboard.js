@@ -2,6 +2,7 @@ import Card from "./Card"
 import '../styles/Dashboard.css'
 import TableCard from "./TableCard"
 import SidePanel from "./SidePanel"
+import {FaSortAmountUpAlt} from 'react-icons/fa'
 import {FaRegFilePdf} from 'react-icons/fa'
 import {RiFilterFill} from 'react-icons/ri'
 import {useState,useRef} from 'react'
@@ -22,27 +23,16 @@ function Dashboard() {
     {"name":"Eugenie Betje","date":"8/28/2021","amount":"5286"},
     {"name":"Deana Kyngdon","date":"3/6/2021","amount":"2"}
     ]
-    // const [dd, setDd] = useState(0)
-    const reff = useRef()
-
-    const handleck = ()=>{
-        // console.log(dd)
-        // setDd(dd+1)
-        // reff.current++;
-        // console.log(reff.current)
-        reff.current.style.backgroundColor="red"
-    }
-    console.log('rendered')
+   
     
     return (
         <>
         <SidePanel/>
         <div className="rightPanel">
 
-<input type="text" ref={reff} />
 
         <div class="flex w-full px-2  h-24 gap-2 py-2 sm:py-0 sm:gap-12 sm:px-16 mt-4">
-                <div class="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl cursor-pointer" onClick={handleck}>
+                <div class="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl cursor-pointer">
                    <Card/>
                 </div>
                 <div class="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl">
@@ -59,16 +49,15 @@ function Dashboard() {
                 </div>
             </div>
 
-            <div className="w-full flex gap-4 mt-8 pl-2"><div className="text-lg font-semibold">Customer List</div>
-            <div> (2 customers)</div></div>
+            <div className="w-full flex gap-4 mt-8 pl-2 pr-2 h-8"><div className="text-lg font-semibold flex-1">Customer List</div>
+            <div className="flex-1"> (2 customers)</div><div className="flex-1"><button className="w-full sm:w-2/4 h-full bg-red-800 text-white rounded shadow-lg bg-blue-600"><a href="/add">Add Customer</a></button></div></div>
        
             <div className="flex w-full h-12 rounded  mt-8 gap-4 pl-2">
-        <div className="w-2/4  pl-2 flex items-center"><div className="flex-1 flex">
-            <div className="flex-1">filter</div>
-            <div className="flex-1">Sort</div>
-        </div></div>
-        <div className="w-2/4 sm:w-1/4 flex gap-4 py-2 px-2"><div className="flex-1"><button className="w-full h-full bg-red-800 text-white rounded shadow-lg bg-blue-600"><a href="/add">Add Customer</a></button></div>
-       </div>
+        <div className="w-full sm:w-3/4  pl-2 flex items-center gap-10">
+            <div className="flex-1"><input type="email" className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Search" style={{"transition": "all 0.15s ease 0s"}}/></div>
+            <div className="flex-1"><FaSortAmountUpAlt/></div>
+      </div>
+     
         </div>
 
         {/* <div className="container filterContainer">
