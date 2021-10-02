@@ -1,5 +1,8 @@
 
 function TableCard(props) {
+
+  console.log('TableCard rendered')
+
     return (
         <>
             <div className="flex flex-row bg-white shadow mt-2 text-center h-16 sm:h-12 justify-center items-center">

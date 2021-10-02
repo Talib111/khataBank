@@ -8,6 +8,8 @@ import LandingS1 from './LandingS1'
 import LandingS2 from './LandingS2'
 import LandingTeam from './LandingTeam'
 const Landing = ()=>{
+  console.log('Landing rendered')
+
     return(
         <>
         

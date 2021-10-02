@@ -2,6 +2,8 @@ import { BsClockHistory} from 'react-icons/bs'
 import { IoLogoWhatsapp} from 'react-icons/io'
 import { FaFileInvoiceDollar} from 'react-icons/fa'
 function LandingHCards() {
+  console.log('LandingHCards rendered')
+
     return (
         <>
              <div className="flex flex-wrap">

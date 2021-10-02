@@ -1,4 +1,6 @@
 const Customer = ()=>{
+  console.log('Customer rendered')
+
     return(
         <>
           <div className="container w-screen sm:w-3/4 bg-gray-200 h-screen float-right px-2">

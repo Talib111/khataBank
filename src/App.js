@@ -14,11 +14,12 @@ import NewCus from './components/NewCus';
 import Gave from './components/Gave';
 import EachTran from './components/EachTran';
 import Card from './components/Card';
-import Landing from './components/Landing';
+import Landing from './components/Landing'
 
 
 function App() {
 
+  console.log('app.js rendered')
   
   return (
 

@@ -7,6 +7,8 @@ import {RiFilterFill} from 'react-icons/ri'
 import {useState,useRef} from 'react'
 
 function Dashboard() {
+  console.log('Dashboard rendered')
+
 
     const arr = [
         {"name":"Delia Faro","date":"3/6/2021","amount":"20152"},

@@ -1,5 +1,8 @@
 
 function LandingForm() {
+
+  console.log('LadningForm rendered')
+
     return (
         <>
           <section className="pb-20 relative block bg-gray-900">

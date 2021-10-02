@@ -1,5 +1,8 @@
 import {FcAlarmClock} from 'react-icons/fc'
+import s1 from '../assets/img/s1.webp'
 function LandingS1() {
+  console.log('LandingS1 rendered')
+
     return (
         <>
              <div className="flex flex-wrap items-center mt-32">
@@ -34,7 +37,7 @@ function LandingS1() {
               >
                 <img
                   alt="..."
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
+                  src={s1}
                   className="w-full align-middle rounded-t-lg"
                 />
                 <blockquote className="relative p-8 mb-4">

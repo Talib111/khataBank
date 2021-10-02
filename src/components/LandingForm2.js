@@ -1,5 +1,8 @@
 
 function LandingForm2() {
+
+  console.log('LandingForm2 rendered')
+
     return (
         <>
              <section className="relative block py-24 lg:pt-0 bg-gray-900">

@@ -1,5 +1,8 @@
 import img1 from '../assets/img/bg.webp'
 function LandingHeader() {
+
+  console.log('LandingHeader rendered')
+
     return (
         <>
              <div
@@ -20,10 +23,10 @@ function LandingHeader() {
             <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div className="pr-12">
                 <h1 className="text-white font-semibold text-5xl">
-                 Manage Business with Khtabank
+                 Manage Business with Khatabank
                 </h1>
                 <p className="mt-4 text-lg text-gray-300">
-                  Khatabnank tools helps you to focus only on your business and handle rest of the things to ensure growth of your business.
+                  Khatabank tools helps you to focus only on your business and handle rest of the things to ensure growth of your business.
                 </p>
               </div>
             </div>

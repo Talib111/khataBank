@@ -2,6 +2,8 @@
 import {FaFacebookF} from 'react-icons/fa'
 import { AiOutlineGoogle} from 'react-icons/ai'
 const Login = ()=>{
+  console.log('Login rendered')
+
     return (
         <>
       <div className="login_outer">

@@ -1,5 +1,7 @@
 
 function EachTran() {
+  console.log('Each trans rendered')
+
     return (
         
 <div className="w-screen flex flex-col sm:w-96 p-8 mx-auto bg-white shadow-xl gap-4 mt-4">

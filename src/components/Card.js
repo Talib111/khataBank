@@ -1,6 +1,8 @@
 import img11 from '../media/in2.png'
 const Card = ()=>{
 
+  console.log('Card rendered')
+
     
     return(
         <>

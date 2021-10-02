@@ -2,6 +2,9 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Nav({ fixed }) {
+
+  console.log('Nav rendered')
+
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <>

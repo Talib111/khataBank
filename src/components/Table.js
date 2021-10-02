@@ -1,6 +1,9 @@
 
 function Table() {
 
+  console.log('Table rendered')
+
+
   
     return (
         <>

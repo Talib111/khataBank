@@ -3,6 +3,9 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MdAttachMoney } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
 const SidePanel = ()=>{
+
+  console.log('SidePanel rendered')
+
     return(
         <>
         <div className="sideContainer">

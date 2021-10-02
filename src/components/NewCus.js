@@ -1,5 +1,8 @@
 
 function NewCus() {
+
+  console.log('NewCus rendered')
+
     return (
         <>
 

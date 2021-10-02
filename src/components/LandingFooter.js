@@ -1,5 +1,7 @@
 
 function LandingFooter() {
+  console.log('LadingFooter rendered')
+
     return (
         <>
              <footer className="relative bg-gray-300 pt-8 pb-6">

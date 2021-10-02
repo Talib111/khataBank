@@ -1,8 +1,11 @@
-import img1 from '../assets/img/team-1-800x800.jpg'
-import img2 from '../assets/img/team-2-800x800.jpg'
-import img3 from '../assets/img/team-3-800x800.jpg'
-import img4 from '../assets/img/team-4-470x470.png'
+import img1 from '../assets/img/im3.png'
+import img2 from '../assets/img/sh2.png'
+import img3 from '../assets/img/il.png'
+import img4 from '../assets/img/ra.jpg'
 function LandingTeam() {
+
+  console.log('LandingTeam rendered')
+
     return (
         <>
              <section className="pt-20 pb-48">
@@ -25,9 +28,9 @@ function LandingTeam() {
                   style={{"max-width": "120px"}}
                 />
                 <div className="pt-6 text-center">
-                  <h5 className="text-xl font-bold">Imran Khan</h5>
+                  <h5 className="text-xl font-bold">Md Imran</h5>
                   <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    Web Developer
+                    Developer
                   </p>
                   <div className="mt-6">
                     <button
@@ -61,7 +64,7 @@ function LandingTeam() {
                 <div className="pt-6 text-center">
                   <h5 className="text-xl font-bold">Shubham Kumar</h5>
                   <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    Marketing Specialist
+                  Developer
                   </p>
                   <div className="mt-6">
                     <button
@@ -90,7 +93,7 @@ function LandingTeam() {
                 <div className="pt-6 text-center">
                   <h5 className="text-xl font-bold">Md Ilyas</h5>
                   <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    UI/UX Designer
+                  Developer
                   </p>
                   <div className="mt-6">
                     <button
@@ -117,14 +120,14 @@ function LandingTeam() {
               <div className="px-6">
                 <img
                   alt="..."
-                  src={img3}
+                  src={img4}
                   className="shadow-lg rounded-full max-w-full mx-auto"
                   style={{"max-width": "120px"}}
                 />
                 <div className="pt-6 text-center">
                   <h5 className="text-xl font-bold">Raiss Garib</h5>
                   <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-                    UI/UX Designer
+                  Developer
                   </p>
                   <div className="mt-6">
                     <button

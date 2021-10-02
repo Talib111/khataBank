@@ -1,5 +1,7 @@
 import {IoMdPersonAdd} from 'react-icons/io'
 const FloatBtn = ()=>{
+  console.log('FloatBtn rendered')
+
     return(
         <div className="floatContainer bg-success"><IoMdPersonAdd size={22} color="white"/></div>
     )

@@ -1,5 +1,9 @@
 import {RiWhatsappFill} from 'react-icons/ri'
+import wht from '../assets/img/wht3.png'
 function LandingS2() {
+
+  console.log('LandingS2 rendered')
+
     return (
         <>
          <section className="relative py-20">
@@ -28,7 +32,7 @@ function LandingS2() {
               <img
                 alt="..."
                 className="max-w-full rounded-lg shadow-lg"
-                src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                src={wht}
               />
             </div>
             <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
