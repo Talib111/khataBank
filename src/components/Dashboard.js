@@ -6,6 +6,7 @@ import {FaSortAmountUpAlt} from 'react-icons/fa'
 import {FaRegFilePdf} from 'react-icons/fa'
 import {RiFilterFill} from 'react-icons/ri'
 import {useState,useRef} from 'react'
+import AddCustomerModal from "./AddCustomerModal"
 
 function Dashboard() {
   console.log('Dashboard rendered')
@@ -31,26 +32,45 @@ function Dashboard() {
         <div className="rightPanel">
 
 
-        <div class="flex w-full px-2  h-24 gap-2 py-2 sm:py-0 sm:gap-12 sm:px-16 mt-4">
-                <div class="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl cursor-pointer">
+        {/* <div className="flex w-full px-2  h-24 gap-2 py-2 sm:py-0 sm:gap-12 sm:px-16 mt-4">
+                <div className="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl cursor-pointer">
                    <Card/>
                 </div>
-                <div class="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl">
+                <div className="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl">
                 <Card/>
                    
                 </div>
-                <div class="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl">
+                <div className="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl">
                    <Card/>
                     
                 </div>
-                <div class="flex-1 flex-col bg-black-300 rounded-lg hidden sm:flex overflow-hidden shadow-xl gap-4 ">
-                    <div class="flex-1 bg-red-200 flex justify-center items-center">Money in the bank</div>
-                    <div class="flex-1 px-12 bg-yellow-300 flex justify-center items-center flex-col">Money in the bank</div>
+                <div className="flex-1 flex-col bg-black-300 rounded-lg hidden sm:flex overflow-hidden shadow-xl gap-4 ">
+                    <div className="flex-1 bg-red-200 flex justify-center items-center">Money in the bank</div>
+                    <div className="flex-1 px-12 bg-yellow-300 flex justify-center items-center flex-col">Money in the bank</div>
                 </div>
+            </div> */}
+             <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex  -m-4 text-center gap-4 justify-center items-center">
+            <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg">
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">3000 k</h2>
+              <p className="leading-relaxed">Balance</p>
             </div>
+            <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg">
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">2000 k</h2>
+              <p className="leading-relaxed">Money</p>
+            </div>
+            <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg">
+              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">5000 k</h2>
+              <p className="leading-relaxed">Status</p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
 
             <div className="w-full flex gap-4 mt-8 pl-2 pr-2 h-8"><div className="text-lg font-semibold flex-1">Customer List</div>
-            <div className="flex-1"> (2 customers)</div><div className="flex-1"><button className="w-full sm:w-2/4 h-full bg-red-800 text-white rounded shadow-lg bg-blue-600"><a href="/add">Add Customer</a></button></div></div>
+            <div className="flex-1"> (2 customers)</div><div className="flex-1"><AddCustomerModal/></div></div>
        
             <div className="flex w-full h-12 rounded  mt-8 gap-4 pl-2">
         <div className="w-full sm:w-3/4  pl-2 flex items-center gap-10">
@@ -68,7 +88,7 @@ function Dashboard() {
             </div>
         </div> */}
 
-        <div className="w-full bg-white shadow">
+        {/* <div className="w-full bg-white shadow">
         {
             
             arr.map((data,index)=>(
@@ -76,7 +96,71 @@ function Dashboard() {
 
             ))
         }
-        </div>
+        </div> */}
+         <section className="text-gray-600 body-font bg-white">
+            <div className="container px-5 py-24 mx-auto">
+             
+              <div className="lg:w-2/3 w-full mx-auto overflow-auto">
+                <table className="table-auto w-full text-left whitespace-no-wrap">
+                  <thead>
+                    <tr>
+                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Plan</th>
+                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Speed</th>
+                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Storage</th>
+                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Price</th>
+                      <th className="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="px-4 py-3">Start</td>
+                      <td className="px-4 py-3">5 Mb/s</td>
+                      <td className="px-4 py-3">15 GB</td>
+                      <td className="px-4 py-3 text-lg text-gray-900">Free</td>
+                      <td className="w-10 text-center">
+                        <input name="plan" type="radio"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border-t-2 border-gray-200 px-4 py-3">Pro</td>
+                      <td className="border-t-2 border-gray-200 px-4 py-3">25 Mb/s</td>
+                      <td className="border-t-2 border-gray-200 px-4 py-3">25 GB</td>
+                      <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
+                      <td className="border-t-2 border-gray-200 w-10 text-center">
+                        <input name="plan" type="radio"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border-t-2 border-gray-200 px-4 py-3">Business</td>
+                      <td className="border-t-2 border-gray-200 px-4 py-3">36 Mb/s</td>
+                      <td className="border-t-2 border-gray-200 px-4 py-3">40 GB</td>
+                      <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$50</td>
+                      <td className="border-t-2 border-gray-200 w-10 text-center">
+                        <input name="plan" type="radio"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Exclusive</td>
+                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">48 Mb/s</td>
+                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">120 GB</td>
+                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$72</td>
+                      <td className="border-t-2 border-b-2 border-gray-200 w-10 text-center">
+                        <input name="plan" type="radio"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+                <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+              </div>
+            </div>
+          </section>
          </div>
             
         </>

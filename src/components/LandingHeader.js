@@ -1,4 +1,6 @@
 import img1 from '../assets/img/bg.webp'
+import LoginModal from './LoginModal'
+import SignupModal from './SignupModal'
 function LandingHeader() {
 
   console.log('LandingHeader rendered')
@@ -28,6 +30,7 @@ function LandingHeader() {
                 <p className="mt-4 text-lg text-gray-300">
                   Khatabank tools helps you to focus only on your business and handle rest of the things to ensure growth of your business.
                 </p>
+                <h1 className="mt-4"><SignupModal/></h1>
               </div>
             </div>
           </div>

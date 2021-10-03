@@ -33,7 +33,7 @@ function LoginModal() {
 
   return (
     <div>
-      <button onClick={openModal} className="w-32 h-10 bg-blue-600">Login Modal</button>
+      <p onClick={openModal}>Login</p>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
