@@ -33,7 +33,7 @@ function AddCustomerModal() {
 
   return (
     <div>
-       <button onClick={openModal} className="w-32 h-10 bg-blue-500 rounded text-white shadow-lg">Add Customer</button>
+       <button onClick={openModal} className="w-32 h-10 bg-indigo-500 rounded text-white shadow-lg">Add Customer</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

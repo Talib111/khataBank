@@ -33,7 +33,7 @@ function GaveGotModal() {
 
   return (
     <div>
-       <button onClick={openModal} className="w-28 h-8 bg-blue-500 rounded text-white shadow-lg">You Gave</button>
+       <button onClick={openModal} className="w-28 h-8 bg-indigo-500 rounded text-white shadow-lg">You Gave</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

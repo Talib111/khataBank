@@ -6,9 +6,7 @@ import './styles/floatbtn.css'
 import './styles/sidepanel.css'
 import Nav from './components/Nav'
 import Dashboard from './components/Dashboard'
-import TableCard from './components/TableCard'
 import {BrowserRouter,Route,Switch} from'react-router-dom'
-import FloatBtn from './components/FloatBtn';
 import Customer from './components/Customer';
 import NewCus from './components/NewCus';
 import Gave from './components/Gave';

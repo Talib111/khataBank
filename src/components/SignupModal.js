@@ -33,7 +33,7 @@ function SignupModal() {
 
   return (
     <div>
-      <button onClick={openModal} className="w-32 h-10 bg-blue-500 rounded text-white shadow-lg">Sign Up</button>
+      <button onClick={openModal} className="w-32 h-10 bg-indigo-500 rounded text-white shadow-lg">Sign Up</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

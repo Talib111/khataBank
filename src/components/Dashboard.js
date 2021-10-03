@@ -31,6 +31,8 @@ function Dashboard() {
         <SidePanel/>
         <div className="rightPanel">
 
+          <h1 className="text-lg font-semibold text-gray-800 px-4">Dashboard</h1>
+
 
         {/* <div className="flex w-full px-2  h-24 gap-2 py-2 sm:py-0 sm:gap-12 sm:px-16 mt-4">
                 <div className="flex-1 bg-purple-300 rounded-lg flex overflow-hidden shadow-xl cursor-pointer">
@@ -50,53 +52,32 @@ function Dashboard() {
                 </div>
             </div> */}
              <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 py-4 mx-auto">
           <div className="flex  -m-4 text-center gap-4 justify-center items-center">
-            <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">3000 k</h2>
-              <p className="leading-relaxed">Balance</p>
-            </div>
-            <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">2000 k</h2>
-              <p className="leading-relaxed">Money</p>
-            </div>
-            <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">5000 k</h2>
-              <p className="leading-relaxed">Status</p>
-            </div>
+           <Card/>
+           <Card/>
+           <Card/>
+           
+            
             
           </div>
         </div>
       </section>
 
-            <div className="w-full flex gap-4 mt-8 pl-2 pr-2 h-8"><div className="text-lg font-semibold flex-1">Customer List</div>
-            <div className="flex-1"> (2 customers)</div><div className="flex-1"><AddCustomerModal/></div></div>
+           
        
-            <div className="flex w-full h-12 rounded  mt-8 gap-4 pl-2">
-        <div className="w-full sm:w-3/4  pl-2 flex items-center gap-10">
-            <div className="flex-1"><input type="email" className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Search" style={{"transition": "all 0.15s ease 0s"}}/></div>
-            <div className="flex-1"><FaSortAmountUpAlt/></div>
+            <div className="flex w-full h-12 rounded  mt-12 gap-4 pl-2">
+        <div className="w-full sm:w-3/4  pl-2 flex items-center gap-2">
+            <div className="flex-1 bg-red-300"><input type="email" className="border-0 px-2 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Search" style={{"transition": "all 0.15s ease 0s"}}/></div>
+            <div className="flex-1"><FaSortAmountUpAlt/></div><div className="flex-1"><AddCustomerModal/></div>
       </div>
      
         </div>
 
-        {/* <div className="container filterContainer">
-            <div className="row">
-                <div className="col-8"><input type="text" /></div>
-                <div className="col-2"><RiFilterFill size={20}/></div>
-                <div className="col-2"><FaRegFilePdf size={20}/></div>
-            </div>
-        </div> */}
+        <div className="w-full flex gap-4 mt-4 pl-2 pr-2 h-8"><div className="text-lg font-semibold flex-initial px-2">Customer List</div>
+            <div className="flex-initial"> (2 customers)</div></div>
 
-        {/* <div className="w-full bg-white shadow">
-        {
-            
-            arr.map((data,index)=>(
-        <TableCard key={index} name={data.name} phone={data.phone} date={data.date} amount={data.amount} />
-
-            ))
-        }
-        </div> */}
+    
          <section className="text-gray-600 body-font bg-white">
             <div className="container px-5 py-24 mx-auto">
              
@@ -112,42 +93,27 @@ function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td className="px-4 py-3">Start</td>
-                      <td className="px-4 py-3">5 Mb/s</td>
-                      <td className="px-4 py-3">15 GB</td>
-                      <td className="px-4 py-3 text-lg text-gray-900">Free</td>
+
+                    {
+                    
+                        arr.map((data,index)=>(
+                        <tr>
+                          {/* <a href="/customer"> */}
+
+                      <td className="px-4 py-3">{data.name}</td>
+                      <td className="px-4 py-3">{data.date}</td>
+                      <td className="px-4 py-3">{data.amount}</td>
+                      <td className="px-4 py-3 text-lg text-gray-900">{data.amount}</td>
                       <td className="w-10 text-center">
-                        <input name="plan" type="radio"/>
+                        <input name={index} type="checkbox"/>
                       </td>
+                    {/* </a> */}
+
                     </tr>
-                    <tr>
-                      <td className="border-t-2 border-gray-200 px-4 py-3">Pro</td>
-                      <td className="border-t-2 border-gray-200 px-4 py-3">25 Mb/s</td>
-                      <td className="border-t-2 border-gray-200 px-4 py-3">25 GB</td>
-                      <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$24</td>
-                      <td className="border-t-2 border-gray-200 w-10 text-center">
-                        <input name="plan" type="radio"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="border-t-2 border-gray-200 px-4 py-3">Business</td>
-                      <td className="border-t-2 border-gray-200 px-4 py-3">36 Mb/s</td>
-                      <td className="border-t-2 border-gray-200 px-4 py-3">40 GB</td>
-                      <td className="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$50</td>
-                      <td className="border-t-2 border-gray-200 w-10 text-center">
-                        <input name="plan" type="radio"/>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">Exclusive</td>
-                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">48 Mb/s</td>
-                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3">120 GB</td>
-                      <td className="border-t-2 border-b-2 border-gray-200 px-4 py-3 text-lg text-gray-900">$72</td>
-                      <td className="border-t-2 border-b-2 border-gray-200 w-10 text-center">
-                        <input name="plan" type="radio"/>
-                      </td>
-                    </tr>
+                      ))
+                     
+                    }
+                  
                   </tbody>
                 </table>
               </div>

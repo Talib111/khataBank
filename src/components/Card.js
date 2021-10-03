@@ -6,16 +6,10 @@ const Card = ()=>{
     
     return(
         <>
-        <div className="shadow w-full bg-white flex" >
-            <div className="w-1/4 bg-yellow-300 flex justify-center items-center broder rounded-r-2xl" >
-            <img src={img11} alt="good" className="card_img_img"  />
+        <div className="p-4 sm:w-1/4 w-1/2 bg-yellow-300 rounded-lg shadow-lg">
+              <h2 className="title-font font-medium sm:text-4xl text-2xl text-gray-900">3000 k</h2>
+              <p className="leading-relaxed">Balance</p>
             </div>
-            <div className="w-3/4  flex flex-col justify-center items-center" >
-                <h4 className="text-center pt-3 text-lg">Balance</h4>
-                <h6 className="text-center">2000</h6>
-            </div>
-  
-</div>
         </>
     )
 }
