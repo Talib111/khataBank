@@ -36,8 +36,23 @@ function AddCustomerModal() {
   }
 
   const handleSubmit = ()=>{
-    console.log(customerName," ",mobile," ",details," ",place)
+    //star the loadingbar
+    // console.log(customerName," ",mobile," ",details," ",place)
     //send the marks to database
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+
+        console.log('inside resoponse ',this.responseText)
+        //colse the modal
+        closeModal()
+       
+       
+      }
+    }
+    xhttp.open("POST", "http://localhost:5500/data/pushcustomer", true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify({_id:"user3",newCustomer:{"customerName": customerName,"customerPhone": mobile,"customerDetails": details,"customerPlace": place}}));
   }
 
   
@@ -64,7 +79,7 @@ function AddCustomerModal() {
     <div className="flex-1 bg-red-200 rounded"><input className="border-2 border-gray-300 w-full h-12 rounded pl-2" type="text" placeholder="Place"  value={place} onChange={(e)=>{setplace(e.target.value)}}/></div>
     {/* <div className="flex-1 bg-red-200 rounded"><input className="border-2 border-gray-300 w-full h-12 rounded pl-2 cursor-pointer" type="date" placeholder="Date"/></div> */}
     {/* <div className="flex-1 bg-white rounded box-border border-2 border-gray-300"><div className="h-12 flex justify-center items-center cursor-pointer">Attach Bill ➕</div></div> */}
-    <div className="flex-1 bg-red-200 rounded"><button className="h-10 bg-green-500 text-white shadow-lg border-2 border-white w-full flex justify-center items-center" onClick={handleSubmit}>Save</button></div>
+    <div className="flex-1 bg-red-200 rounded"><button className="h-10 bg-green-500 text-white shadow-lg border-2 border-white w-full flex justify-center items-center" onClick={handleSubmit}><div className="h-4 w-4 bg-white animate-spin"></div>Save</button></div>
 </div>
       </Modal>
     </div>
