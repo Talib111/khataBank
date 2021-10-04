@@ -1,4 +1,5 @@
-import GaveGotModal from "./GaveGotModal"
+import MoneyGave from "./MoneyGave"
+import MoneyReceive from "./MoneyReceive.js"
 import SidePanel from "./SidePanel"
 
 const Customer = ()=>{
@@ -45,8 +46,8 @@ const Customer = ()=>{
         {/* <!-- transcations --> */}
         <div className="flex w-full h-12 rounded  mt-12">
         <div className="w-2/4 sm:w-3/4 pl-2 flex items-center"><h1>Transcations</h1></div>
-        <div className="w-2/4 sm:w-1/4 flex gap-4 py-2"><div className="flex-1"><GaveGotModal/></div>
-        <div className="flex-1"><button className="w-full h-full bg-green-800 text-white rounded shadow-lg">You Got</button></div></div>
+        <div className="w-2/4 sm:w-1/4 flex gap-4 py-2"><div className="flex-1"><MoneyGave/></div>
+        <div className="flex-1"><MoneyReceive/></div></div>
         </div>
 
         {/* <!-- all history --> */}
