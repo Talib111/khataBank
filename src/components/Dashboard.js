@@ -7,7 +7,7 @@ import {FaRegFilePdf} from 'react-icons/fa'
 import {RiFilterFill} from 'react-icons/ri'
 import {useState,useRef} from 'react'
 import AddCustomerModal from "./AddCustomerModal"
-
+import {useEffect} from 'react'
 function Dashboard() {
   console.log('Dashboard rendered')
 
@@ -23,7 +23,28 @@ function Dashboard() {
     {"name":"Janifer Wingrove","date":"2/4/2021","amount":"34552"},
     {"name":"Eugenie Betje","date":"8/28/2021","amount":"5286"},
     {"name":"Deana Kyngdon","date":"3/6/2021","amount":"2"}
+    
     ]
+    const [customerDataAr, setCustomerDataAr] = useState(["hello"])
+    const [userAllData, setUserAllData] = useState({"hello": "yes"})
+
+    useEffect(() => {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+          console.log('inside useffect ',JSON.parse(this.responseText))
+          let customergotdata = JSON.parse(this.responseText)
+          setCustomerDataAr(customergotdata.customerData)
+          setUserAllData(customergotdata)
+         
+        }
+      }
+      xhttp.open("POST", "http://localhost:5500/data/getuser", true);
+      xhttp.setRequestHeader("Content-Type", "application/json");
+      xhttp.send(JSON.stringify({_id:"user3"}));
+  
+    }, [])
    
     
     return (
@@ -32,6 +53,9 @@ function Dashboard() {
         <div className="rightPanel">
 
           <h1 className="text-lg font-semibold text-gray-800 px-4">Dashboard</h1>
+
+
+         
 
 
         {/* <div className="flex w-full px-2  h-24 gap-2 py-2 sm:py-0 sm:gap-12 sm:px-16 mt-4">
@@ -52,11 +76,12 @@ function Dashboard() {
                 </div>
             </div> */}
              <section className="text-gray-600 body-font">
+
         <div className="container px-5 py-4 mx-auto">
           <div className="flex  -m-4 text-center gap-4 justify-center items-center">
-           <Card/>
-           <Card/>
-           <Card/>
+           <Card cardName="Balance" cardValue={userAllData.totalBalance}/>
+           <Card cardName="To Give" cardValue={userAllData.totalBalance}/>
+           <Card cardName="To Get" cardValue={userAllData.totalBalance}/>
            
             
             
@@ -96,14 +121,14 @@ function Dashboard() {
 
                     {
                     
-                        arr.map((data,index)=>(
+                        customerDataAr.map((data,index)=>(
                         <tr>
                           {/* <a href="/customer"> */}
 
-                      <td className="px-4 py-3">{data.name}</td>
-                      <td className="px-4 py-3">{data.date}</td>
-                      <td className="px-4 py-3">{data.amount}</td>
-                      <td className="px-4 py-3 text-lg text-gray-900">{data.amount}</td>
+                      <td className="px-4 py-3">{data.customerName}</td>
+                      <td className="px-4 py-3">{data.customerPhone}</td>
+                      <td className="px-4 py-3">{data.customerName}</td>
+                      <td className="px-4 py-3 text-lg text-gray-900">{data.customerPhone}</td>
                       <td className="w-10 text-center">
                         <input name={index} type="checkbox"/>
                       </td>
